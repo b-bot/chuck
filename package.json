@@ -1,0 +1,22 @@
+{
+  "name": "chuck",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "apollo-server": "^2.9.5",
+    "apollo-server-micro": "^2.9.5",
+    "graphql": "^14.5.8",
+    "micro": "^9.3.4",
+    "next": "9.0.7",
+    "react": "16.10.2",
+    "react-dom": "16.10.2"
+  },
+  "devDependencies": {
+    "react-apollo": "^3.1.2"
+  }
+}
