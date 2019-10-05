@@ -31,6 +31,8 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  introspection: true,
+  playground: true,
 })
 
 module.exports = server.createHandler({ path: '/api' })
