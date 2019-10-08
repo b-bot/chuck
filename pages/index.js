@@ -1,88 +1,74 @@
-import React from 'react'
-import Head from 'next/head'
-import Nav from '../components/nav'
+import React from 'react';
+import Head from 'next/head';
+import { withApollo } from '../apollo/client';
+import Footer from '../components/Footer';
+import Intro from '../components/Intro';
+import Joke from '../components/Joke';
 
-const Home = () => (
+const Index = () => (
   <div>
     <Head>
-      <title>Home</title>
-      <link rel='icon' href='/static/favicon.ico' importance='low' />
+      {/* Meta */}
+      <link rel="icon" type="image/ico" sizes="60x60" href="/static/favicon.ico" />
+      <title>Chuck Norris API | GraphQL Wrapper</title>
+      <meta charSet="utf-8" />
+      <meta name="author" content="Byron Polley" />
+      <meta name="keywords" content="byron, polley, byron polley, b-b0t, b-bot, b, software, software engineering, web, web development, web design, developer, javascript, node, html, css, graphql, react, chuck, norris" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="GraphQL wrapper for chucknorris.io API." />
+      <meta name="theme-color" content="#2a2a2a" />
+      <script src="https://use.typekit.net/ifb8nia.js" />
     </Head>
-
-    <Nav />
-
-    <div className='hero'>
-      <h1 className='title'>Welcome to Next.js!</h1>
-      <p className='description'>
-        To get started, edit <code>pages/index.js</code> and save to reload.
-      </p>
-
-      <div className='row'>
-        <a href='https://nextjs.org/docs' className='card'>
-          <h3>Documentation &rarr;</h3>
-          <p>Learn more about Next.js in the documentation.</p>
-        </a>
-        <a href='https://nextjs.org/learn' className='card'>
-          <h3>Next.js Learn &rarr;</h3>
-          <p>Learn about Next.js by following an interactive tutorial!</p>
-        </a>
-        <a
-          href='https://github.com/zeit/next.js/tree/master/examples'
-          className='card'
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Find other example boilerplates on the Next.js GitHub.</p>
-        </a>
-      </div>
+    <div className="wrapper">
+      <Intro />
+      <Joke />
+      <Footer />
     </div>
-
-    <style jsx>{`
-      .hero {
-        width: 100%;
-        color: #333;
+    <style jsx global>
+      {`
+      :root {
+        --fg: #a9a9a9;
+        --bg: #2a2a2a;
+        --accent: #202020;
+        --primary: #f15a24;
+        --font: canada-type-gibson, sans-serif;
       }
-      .title {
+      @media (prefers-color-scheme: light) {
+        :root {
+          --fg: #535353;
+          --bg: #f4f5f5;
+          --accent: #ffffff;
+        }
+      }
+      body {
+        min-height: 100vh;
+        background-color: var(--bg);
+        color: var(--fg);
+        font-family: var(--font);
+        transition: 300ms ease-in-out;
         margin: 0;
-        width: 100%;
-        padding-top: 80px;
-        line-height: 1.15;
-        font-size: 48px;
       }
-      .title,
-      .description {
-        text-align: center;
-      }
-      .row {
-        max-width: 880px;
-        margin: 80px auto 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-      }
-      .card {
-        padding: 18px 18px 24px;
-        width: 220px;
-        text-align: left;
+      a {
+        color: var(--primary);
         text-decoration: none;
-        color: #434343;
-        border: 1px solid #9b9b9b;
       }
-      .card:hover {
-        border-color: #067df7;
+      a:hover {
+        cursor: pointer;
       }
-      .card h3 {
-        margin: 0;
-        color: #067df7;
-        font-size: 18px;
+      select {
+        text-align: center !important;
       }
-      .card p {
-        margin: 0;
-        padding: 12px 0 0;
-        font-size: 13px;
-        color: #333;
+      .wrapper {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
-    `}</style>
+    `}
+    </style>
   </div>
-)
+);
 
-export default Home
+export default withApollo(Index);
