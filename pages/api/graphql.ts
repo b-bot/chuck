@@ -7,7 +7,7 @@ const server = new ApolloServer({
   resolvers,
   introspection: true,
   playground: true,
-  upload: false,
+  uploads: false,
 });
 
 export const config = {

@@ -10,7 +10,7 @@ The GraphQL playground can be accessed at https://chuck.byronpolley.com/api/grap
 
 To run locally you will need Now CLI.
 
-`npm i -g now`
+`npm install -g now`
 
 `npm install`
 
@@ -51,6 +51,7 @@ To run locally you will need Now CLI.
 4. Apollo Server Micro _2.9.0_
 5. NodeJS LTS _10.16.3_
 6. ESLint _6.1.0_
+7. Typescript _3.6.4_
 
 ---
 
