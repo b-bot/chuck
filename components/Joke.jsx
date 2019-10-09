@@ -118,9 +118,11 @@ function Random({ category }) {
         }
         p {
           font-size: 16px;
+          font-weight: 300;
           text-align: center;
           margin: 20px auto;
           max-width: 400px;
+          padding: 0 20px;
         }
         button {
           min-width: 200px;

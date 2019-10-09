@@ -16,9 +16,10 @@ export default () => (
         border-bottom-right-radius: 5px;
       }
       h1 {
+        padding: 0 20px;
         text-transform: uppercase;
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 600;
         text-align: center;
         margin-bottom: 40px;
       }
@@ -27,8 +28,17 @@ export default () => (
         margin: 2rem auto;
         display: block;
       }
-      @media screen and (max-width: 768px) {
-
+      @media screen and (max-width: 576px) {
+        .logo{
+          max-width: 8rem;
+          margin: 2rem auto;
+          display: block;
+        }
+        .intro {
+          background: var(--accent);
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
       }
       `}
     </style>

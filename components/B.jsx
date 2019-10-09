@@ -1,7 +1,7 @@
 import React from 'react';
 
 const B = (props) => (
-  <a style={{ padding: props.padding, margin: props.margin }} href={props.url} target="_blank" rel="noopener noreferrer" aria-label="B">
+  <a href={props.url} target="_blank" rel="noopener noreferrer" aria-label="B">
     <svg height={props.height} width={props.width} clipRule="evenodd" fillRule="evenodd" viewBox="0 0 500 500">
       <clipPath id="prefix__a">
         <path d="M0 0h500v500H0z" />
@@ -22,6 +22,7 @@ const B = (props) => (
       {`
       svg {
         fill: var(--fg);
+        margin: 10px;
       }
       svg:hover {
         fill: var(--primary);

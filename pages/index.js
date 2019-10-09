@@ -10,14 +10,14 @@ const Index = () => (
     <Head>
       {/* Meta */}
       <link rel="icon" type="image/ico" sizes="60x60" href="/static/favicon.ico" />
-      <title>Chuck Norris API | GraphQL Wrapper</title>
+      <title>GraphQL Wrapper | Chuck Norris Jokes API</title>
       <meta charSet="utf-8" />
       <meta name="author" content="Byron Polley" />
       <meta name="keywords" content="byron, polley, byron polley, b-b0t, b-bot, b, software, software engineering, web, web development, web design, developer, javascript, node, html, css, graphql, react, chuck, norris" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="description" content="GraphQL wrapper for chucknorris.io API." />
       <meta name="theme-color" content="#2a2a2a" />
-      <script src="https://use.typekit.net/ifb8nia.js" />
+      <link rel="stylesheet" href="https://use.typekit.net/lqv1kpu.css" />
     </Head>
     <div className="wrapper">
       <Intro />
@@ -41,10 +41,9 @@ const Index = () => (
         }
       }
       body {
-        min-height: 100vh;
         background-color: var(--bg);
         color: var(--fg);
-        font-family: var(--font);
+        font-family: canada-type-gibson;
         transition: 300ms ease-in-out;
         margin: 0;
       }
