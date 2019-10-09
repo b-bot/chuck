@@ -4,9 +4,7 @@ import { B, GitHub } from './index';
 export default () => (
   <footer>
     <p>
-      The GraphQL API endpoint is
-      <a href="https://chuck.byronpolley.com/api/graphql" target="_blank" rel="noopener noreferrer"> chuck.byronpolley.com/api/graphql </a>
-      The playground has been left active.
+      The GraphQL playground has been left active. Readme provided at the GitHub repository below.
     </p>
     <div className="social">
       <B width="24px" height="24px" url="https://b-b0t.com/" />
@@ -26,6 +24,7 @@ export default () => (
         padding: 0 20px;
         text-align: center;
         line-height: 20px;
+        max-width: 300px;
       }
       .social {
         display: flex;

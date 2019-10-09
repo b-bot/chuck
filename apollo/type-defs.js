@@ -8,11 +8,6 @@ export const typeDefs = gql`
   }
 
   type Random {
-    id: String
-    value: String
-  }
-
-  type Search {
     created_at: String
     icon_url: String
     id: String
@@ -24,6 +19,5 @@ export const typeDefs = gql`
   type Query {
     categories: [Category]
     random(category: String): Random
-    search(term: String): [Search]
   }
 `;

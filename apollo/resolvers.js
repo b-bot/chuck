@@ -11,9 +11,5 @@ export const resolvers = {
       const { category } = args;
       return fetch(`${baseURL}random?category=${category}`).then((res) => res.json());
     },
-    search: (parent, args) => {
-      const { term } = args;
-      return fetch(`${baseURL}search?query=${term}`).result.then((res) => res.json());
-    },
   },
 };

@@ -4,7 +4,9 @@ export default () => (
   <div className="intro">
     <img className="logo" src="/static/logo.png" alt="chucknorris" />
     <h1>
-      An interactive GraphQL wrapper for the
+      An interactive
+      <a href="https://chuck.byronpolley.com/api/graphql" target="_blank" rel="noopener noreferrer"> GraphQL wrapper </a>
+      for the
       <a href="https://chucknorris.io" target="_blank" rel="noopener noreferrer"> chucknorris.io </a>
       API
     </h1>

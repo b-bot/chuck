@@ -65,13 +65,13 @@ function Categories({ onCategorySelected }) {
           letter-spacing: 1px;
           height: 40px;
           text-transform: uppercase;
-          border: 1px solid var(--fg);
+          border: 2px solid var(--fg);
           background: var(--bg);
           color: var(--fg);
         }
         select:hover {
           color: var(--primary);
-          border: 1px solid var(--primary);
+          border: 2px solid var(--primary);
           cursor: pointer;
         }
         @media screen and (max-width: 576px) {
@@ -119,6 +119,7 @@ function Random({ category }) {
         p {
           font-size: 16px;
           font-weight: 300;
+          line-height: 22px;
           text-align: center;
           margin: 20px auto;
           max-width: 400px;
@@ -135,13 +136,17 @@ function Random({ category }) {
           text-transform: uppercase;
           background: var(--bg);
           color: var(--fg);
-          border: 1px solid var(--fg);
+          border: 2px solid var(--fg);
           border-radius: 2px;
+          transition: transform .2s;
+          
         }
         button:hover {
-          color: var(--primary);
-          border: 1px solid var(--primary);
+          color: var(--bg);
+          background: var(--primary);
+          border: 2px solid var(--primary);
           cursor: pointer;
+          transform: scale(1.1);
         }
       `}
       </style>

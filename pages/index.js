@@ -10,7 +10,7 @@ const Index = () => (
     <Head>
       {/* Meta */}
       <link rel="icon" type="image/ico" sizes="60x60" href="/static/favicon.ico" />
-      <title>GraphQL Wrapper | Chuck Norris Jokes API</title>
+      <title>Chuck | GraphQL Wrapper for api.chucknorris.io</title>
       <meta charSet="utf-8" />
       <meta name="author" content="Byron Polley" />
       <meta name="keywords" content="byron, polley, byron polley, b-b0t, b-bot, b, software, software engineering, web, web development, web design, developer, javascript, node, html, css, graphql, react, chuck, norris" />
@@ -60,7 +60,7 @@ const Index = () => (
       .wrapper {
         margin: 0 auto;
         width: 100%;
-        max-width: 600px;
+        max-width: 578px;
         display: flex;
         flex-direction: column;
         min-height: 100vh;
