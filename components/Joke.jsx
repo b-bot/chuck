@@ -33,15 +33,17 @@ function Categories({ onCategorySelected }) {
   if (error) return `Error! ${error.message}`;
   return (
     <div className="joke">
-      <p>Change Category</p>
-      <Arrow height="40px" width="50px" />
-      <select name="category" onChange={onCategorySelected}>
-        {categories.map((category, id) => (
-          <option key={id} value={category.name}>
-            {category.name}
-          </option>
-        ))}
-      </select>
+      <div><p>Change Category</p></div>
+      <div><Arrow height="40px" width="50px" /></div>
+      <div>
+        <select name="category" onChange={onCategorySelected}>
+          {categories.map((category, id) => (
+            <option className="name" key={id} value={category.name}>
+              {category.name}
+            </option>
+          ))}
+        </select>
+      </div>
       <style jsx>
         {`
         .joke {
@@ -63,15 +65,19 @@ function Categories({ onCategorySelected }) {
           -webkit-appearance: none;
           -moz-appearance: none;
           text-align-last: center;
+          text-align: -webkit-center;
           min-width: 200px;
           font-size: 20px;
           font-weight: 600;
           letter-spacing: 1px;
-          height: 40px;
+          height: 42px;
           text-transform: uppercase;
           border: 2px solid var(--fg);
           background: var(--bg);
           color: var(--fg);
+        }
+        .name {
+          text-transform: uppercase;
         }
         select:hover {
           color: var(--primary);
