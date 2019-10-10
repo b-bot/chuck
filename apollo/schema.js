@@ -1,5 +1,5 @@
 import { makeExecutableSchema } from 'graphql-tools';
-import { typeDefs } from './type-defs';
+import { typeDefs } from './type-defs.ts';
 import { resolvers } from './resolvers.ts';
 
 // eslint-disable-next-line import/prefer-default-export

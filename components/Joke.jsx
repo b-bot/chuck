@@ -3,6 +3,8 @@ import gql from 'graphql-tag';
 import { useQuery } from '@apollo/react-hooks';
 import { Arrow, Loader } from './index.ts';
 
+// Create GraphQL queries
+
 const GET_CATEGORIES = gql`
   {
     categories {
@@ -18,6 +20,8 @@ const GET_JOKE = gql`
     }
   }
 `;
+
+// Request data via @apollo/react-hooks
 
 function Categories({ onCategorySelected }) {
   const {
@@ -76,6 +80,7 @@ function Categories({ onCategorySelected }) {
         }
         @media screen and (max-width: 576px) {
           .joke {
+            margin-top: 40px;
             flex-direction: column;
             justify-content: center;
           }
@@ -115,6 +120,7 @@ function Random({ category }) {
         {`
         .result {
           background: var(--bg);
+          padding-bottom: 40px;
         }
         p {
           font-size: 16px;
@@ -159,6 +165,8 @@ class Joke extends React.Component {
     super(props);
     this.state = { selectedCategory: 'animal' };
   }
+
+  // Re-render with updated state
 
   onCategorySelected = ({ target }) => {
     this.setState(() => ({ selectedCategory: target.value }));

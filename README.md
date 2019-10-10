@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/b-b0t/chuck/master/static/logo.png" width="256" height="256" />
 
 # Chuck
----
+
 An interactive GraphQL wrapper for the https://chucknorris.io API
 
 ## Usage
@@ -10,7 +10,7 @@ The GraphQL playground can be accessed at https://chuck.byronpolley.com/api/grap
 
 To run locally you will need Now CLI.
 
-`npm install -g now`
+`npm i -g now`
 
 `npm install`
 
@@ -18,27 +18,27 @@ To run locally you will need Now CLI.
 
 ### Queries
 
-- Retrieve a list of available categories
+Retrieve a list of available categories
 
 ```
 {
   categories {
-		name
+	name
   }
 }
 ```
 
-- Retrieve a random Chuck Norris joke from one of the retrieved categories
+Retrieve a random Chuck Norris joke from one of the available categories
 
 ```
 {
   random(category: "dev") {
-   	created_at
-    icon_url
-    id
-    updated_at
-    url
-    value
+	created_at
+	icon_url
+	id
+	updated_at
+	url
+	value
   }
 }
 ```
@@ -55,8 +55,8 @@ To run locally you will need Now CLI.
 
 ---
 
-#### Footnotes
+#### Notes
 
-Hosted on [Now](https://zeit.co/ "Now")
+- The frontend implements `prefers-color-scheme` on supported browsers. Try the transition by switching your OS theme :)
 
-The frontend implements `prefers-color-scheme` on supported browsers. Try the transition by switching your OS theme :)
+- Hosted on [Now](https://zeit.co/ "Now")
